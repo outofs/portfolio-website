@@ -44,3 +44,47 @@ function toggleSkills() {
 skillsHeader.forEach((el) => {
   el.addEventListener("click", toggleSkills);
 });
+
+/// Qualification Tabs
+const tabs = document.querySelectorAll("[data-target]");
+console.log("Tabs:", tabs);
+const tabContents = document.querySelectorAll("[data-content]");
+console.log("Tab contents:", tabContents);
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", function () {
+    const target = document.querySelector(tab.dataset.target);
+    console.log(target);
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("qualification__active");
+    });
+    target.classList.add("qualification__active");
+
+    tabs.forEach((tab) => {
+      tab.classList.remove("qualification__active");
+    });
+    tab.classList.add("qualification__active");
+  });
+});
+
+// /// My variant
+// const btnEducation = document.querySelectorAll('[data-target="#education"]');
+// const btnWork = document.querySelectorAll('[data-target="#work"]');
+// console.log(btnEducation);
+// const education = document.querySelector("#education");
+// const work = document.querySelector("#work");
+// console.log(education);
+
+// btnEducation.forEach((el) => {
+//   el.addEventListener("click", function (e) {
+//     education.classList.add("qualification__active");
+//     work.classList.remove("qualification__active");
+//   });
+// });
+
+// btnWork.forEach((el) => {
+//   el.addEventListener("click", function (e) {
+//     work.classList.add("qualification__active");
+//     education.classList.remove("qualification__active");
+//   });
+// });
