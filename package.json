@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "parcel": "^2.6.2"
+  },
+  "name": "portfolio-page",
+  "version": "1.0.0",
+  "description": "My portfolio page",
+  "default": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://outofs@github.com/outofs/portfolio-website.git"
+  },
+  "author": "Olexandr Hirych",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/outofs/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/outofs/portfolio-website#readme"
+}
