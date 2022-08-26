@@ -394,14 +394,12 @@ img {
   grid-template-columns: 1fr;
 }
 
-.about__main {
-  /* position: absolute; */
-}
 .about__bg {
   position: absolute;
   background-image: url("./img/bg/3.png");
   width: 100%;
   height: 100%;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -410,10 +408,37 @@ img {
 }
 
 .about__img {
-  width: 200px;
-  border-radius: 0.5rem;
+  display: flex;
   justify-self: center;
   align-self: center;
+  justify-content: center;
+}
+
+.about__img:hover {
+  cursor: pointer;
+}
+
+.about__img img,
+.about__img source {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .about__description {
@@ -539,6 +564,10 @@ img {
   width: 60%;
 }
 
+.skills__react {
+  width: 0%;
+}
+
 .skills__node {
   width: 0%;
 }
@@ -648,7 +677,7 @@ img {
 
 .qualification__calendar {
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: #555;
 }
 
 .qualification__rounder {
@@ -1197,7 +1226,12 @@ img {
   }
 
   .about__img {
-    width: 350px;
+    width: 250px;
+  }
+
+  .about__img picture img,
+  .about__img picture source {
+    width: 250px;
   }
 
   .about__description {

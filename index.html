@@ -93,7 +93,13 @@
               </a>
             </div>
             <div class="home__img">
-              <img src="./src/img/photo_2021-04-26_22-01-591.png" alt="" />
+              <picture>
+                <source
+                  srcset="./src/img/portfolio-img-small.webp"
+                  type="image/web"
+                />
+                <img src="./src/img/portfolio-img-small.png" alt="" />
+              </picture>
             </div>
             <div class="home__data">
               <h1 class="home__title">Hi, I'am Olexandr</h1>
@@ -126,6 +132,16 @@
           <span class="section__subtitle">My introduction</span>
 
           <div class="about__container container grid">
+            <div class="about__img">
+              <picture>
+                <source
+                  srcset="./src/img/portfolio-img-2-transparent.webp"
+                  type="image/web"
+                />
+                <img src="./src/img/portfolio-img-2-transparent.png" alt="" />
+              </picture>
+              <!-- <img src="./src/img/portfolio-img-2-transparent.png" alt="" /> -->
+            </div>
             <div class="about__data">
               <p class="about__description">
                 I'm a frontend developer, amateur designer and illustrator :)
@@ -216,6 +232,17 @@
                 </div>
                 <div class="skills__bar">
                   <span class="skills__percentage skills__js"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <i class="uil uil-check-circle skill__icon"></i>
+                  <h3 class="skills__name">React.js</h3>
+                  <span class="skills__number">in process</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__react"></span>
                 </div>
               </div>
             </div>
