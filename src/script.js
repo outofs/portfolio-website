@@ -46,48 +46,27 @@ skillsHeader.forEach((el) => {
 });
 
 /// Qualification Tabs
-const tabs = document.querySelectorAll("[data-target]");
-console.log("Tabs:", tabs);
-const tabContents = document.querySelectorAll("[data-content]");
-console.log("Tab contents:", tabContents);
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", function () {
-    const target = document.querySelector(tab.dataset.target);
-    console.log(target);
-    tabContents.forEach((tabContent) => {
-      tabContent.classList.remove("qualification__active");
-    });
-    target.classList.add("qualification__active");
+const btnEducation = document.querySelectorAll('[data-target="#education"]');
+const btnWork = document.querySelectorAll('[data-target="#work"]');
+console.log(btnEducation);
+const education = document.querySelector("#education");
+const work = document.querySelector("#work");
+console.log(education);
 
-    tabs.forEach((tab) => {
-      tab.classList.remove("qualification__active");
-    });
-    tab.classList.add("qualification__active");
+btnEducation.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    education.classList.add("qualification__active");
+    work.classList.remove("qualification__active");
   });
 });
 
-// /// My variant
-// const btnEducation = document.querySelectorAll('[data-target="#education"]');
-// const btnWork = document.querySelectorAll('[data-target="#work"]');
-// console.log(btnEducation);
-// const education = document.querySelector("#education");
-// const work = document.querySelector("#work");
-// console.log(education);
-
-// btnEducation.forEach((el) => {
-//   el.addEventListener("click", function (e) {
-//     education.classList.add("qualification__active");
-//     work.classList.remove("qualification__active");
-//   });
-// });
-
-// btnWork.forEach((el) => {
-//   el.addEventListener("click", function (e) {
-//     work.classList.add("qualification__active");
-//     education.classList.remove("qualification__active");
-//   });
-// });
+btnWork.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    work.classList.add("qualification__active");
+    education.classList.remove("qualification__active");
+  });
+});
 
 /// Services
 //Services modal
@@ -126,24 +105,6 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
     clickable: true,
   },
 });
-
-// /// Testimonial
-// //Swiper
-// let swiperTestimonial = new Swiper(".testimonial__container", {
-//   loop: true,
-//   grabCursor: true,
-//   spaceBetween: 48,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//     dynamicBullets: true,
-//   },
-//   breakpoints: {
-//     568: {
-//       slidesPerView: 2,
-//     },
-//   },
-// });
 
 ///Scroll Active
 const sections = document.querySelectorAll("section[id]");
@@ -190,17 +151,7 @@ function scrollUp() {
 }
 window.addEventListener("scroll", scrollUp);
 
-///Dark Light theme
-const themeButton = document.getElementById("theme-button");
-const darkTheme = "dark-theme";
-const iconTheme = "uil-sun";
-
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem("selected-theme");
-const selectedIcon = localStorage.getItem("selected-icon");
-
 ///Spinning img
-
 document.querySelector(".about__img").addEventListener("click", function (e) {
   this.classList.toggle("spin");
 });
